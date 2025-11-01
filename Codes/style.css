@@ -1,0 +1,64 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text for readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Footer Styles */
+header, footer {
+    background-color: #004d40; /* A dark teal color */
+    color: white;
+    padding: 15px 30px; /* 15px top/bottom, 30px left/right */
+    text-align: center;
+}
+
+/* Main Content Area */
+main {
+    padding: 20px;
+}
+
+/* --- Combined Navigation Link Styles --- */
+
+/* Base style for all nav links (including unvisited and visited) */
+/* This ensures links are always white, solving the "unclicked state" requirement */
+nav a,
+nav a:link,
+nav a:visited {
+    color: white; /* White color for good contrast on the dark header */
+    text-decoration: none; /* Remove the underline */
+    margin: 0 15px; /* Space between links */
+    font-weight: bold;
+    transition: color 0.2s ease-in-out; /* Smooth color change effect on hover */
+}
+
+/* Style for when a user hovers over a link */
+nav a:hover {
+    color: #b2dfdb; /* A lighter shade of teal for a subtle hover effect */
+    text-decoration: underline; /* Add underline on hover for clarity */
+}
+
+/* Style for when a link is actively being clicked */
+nav a:active {
+    color: #ff8a80; /* A soft red to indicate a click */
+}
+
+
+/* Table Styling for the Cart Page */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merges cell borders */
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+thead {
+    background-color: #e0e0e0; /* A light grey for the table header row */
+}
