@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <h2 class="text-center mb-4">Blog & Articles</h2>
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                
+                <article class="blog-post mb-4 p-3 border rounded shadow-sm">
+                    <h3>Understanding Client-Side vs. Server-Side Rendering</h3>
+                    <p class="text-muted">Posted on 28 October 2025</p>
+                    <p>In web development, two primary approaches exist for rendering content: Client-Side Rendering (CSR) and Server-Side Rendering (SSR). This post explores the fundamental differences...</p>
+                    
+                    <div class="blog-content mt-3">
+                        <p><strong>Client-Side Rendering (CSR)</strong> is the approach where content is rendered in the browser using JavaScript. When a user requests a page, the server sends a minimal HTML file with a JavaScript bundle. The browser then executes this JavaScript, fetches data from APIs, and builds the HTML on the fly. This is the default for Single Page Applications (SPAs) built with frameworks like React, Vue, or Angular.</p>
+                        
+                        <h5>Pros of CSR:</h5>
+                        <ul>
+                            <li><strong>Rich Interactivity:</strong> User interactions feel incredibly fast and responsive after the initial load.</li>
+                            <li><strong>Faster Subsequent Navigation:</strong> Clicking links only swaps out components, it doesn't require a full page reload from the server.</li>
+                        </ul>
+                        <h5>Cons of CSR:</h5>
+                        <ul>
+                            <li><strong>Slow Initial Load:</strong> The user sees a blank white screen until the large JavaScript bundle is downloaded, parsed, and executed.</li>
+                            <li><strong>Poor SEO:</strong> Search engine crawlers may struggle to index content that is created by JavaScript, although this is improving.</li>
+                        </ul>
+                        
+                        <hr class="my-3">
+                        
+                        <p><strong>Server-Side Rendering (SSR)</strong>, on the other hand, involves the server generating the full HTML for a page in response to a user's request. When the browser receives the HTML, it's ready to be displayed immediately. The browser then downloads the JavaScript, which "hydrates" the page, attaching event listeners and making it interactive.</p>
+                        
+                        <h5>Pros of SSR:</h5>
+                        <ul>
+                            <li><strong>Fast Initial Page Load:</strong> Users see content almost instantly (a fast "First Contentful Paint").</li>
+                            <li><strong>Excellent SEO:</strong> Search engines can easily crawl the fully-formed HTML content.</li>
+                        </ul>
+                        <h5>Cons of SSR:</h5>
+                        <ul>
+                            <li><strong>Slower Page-to-Page Navigation:</strong> Every new page requires a full roundtrip to the server to generate new HTML.</li>
+                            <li><strong>Higher Server Load:</strong> The server is doing the rendering work for every user request.</li>
+                        </ul>
+                        <p>Today, many developers use hybrid approaches like <strong>Static Site Generation (SSG)</strong> or <strong>Incremental Static Regeneration (ISR)</strong> to get the best of both worlds.</p>
+                    </div>
+                </article>
+
+                <hr class="my-4">
+
+                <article class="blog-post mb-4 p-3 border rounded shadow-sm">
+                    <h3>A Deep Dive into Bootstrap's Grid System</h3>
+                    <p class="text-muted">Posted on 20 October 2025</p>
+                    <p>Bootstrap's grid system is the foundation of its responsive layout capabilities. It's a powerful, mobile-first flexbox grid that allows you to build layouts of all shapes and sizes...</p>
+                    
+                    <div class="blog-content mt-3">
+                        <p>The system is built on a 12-column grid. The three main components are:</p>
+                        <ul>
+                            <li><strong><code>.container</code>:</strong> This wraps your content, providing a fixed-width (<code>.container</code>) or full-width (<code>.container-fluid</code>) element.</li>
+                            <li><strong><code>.row</code>:</strong> Rows are wrappers for columns. They use flexbox and have negative margins to counteract the default padding on columns.</li>
+                            <li><strong><code>.col-*</code>:</strong> This is where the magic happens. You specify how many of the 12 columns an element should span at different screen sizes.</li>
+                        </ul>
+                        <h5>Understanding Breakpoints</h5>
+                        <p>Bootstrap's grid is "mobile-first." This means styles you apply to small devices (like <code>.col-12</code>) automatically apply to larger devices, unless you override them. The breakpoints are:</p>
+                        <ul>
+                            <li><strong><code>.col-</code></strong> (Extra small < 576px)</li>
+                            <li><strong><code>.col-sm-</code></strong> (Small ≥ 576px)</li>
+                            <li><strong><code>.col-md-</code></strong> (Medium ≥ 768px)</li>
+                            <li><strong><code>.col-lg-</code></strong> (Large ≥ 992px)</li>
+                            <li><strong><code>.col-xl-</code></strong> (Extra large ≥ 1200px)</li>
+                        </ul>
+                        <h5>Practical Example:</h5>
+                        <p>Consider this code: <code>&lt;div class="col-12 col-md-6 col-lg-4"&gt;...&lt;/div&gt;</code></p>
+                        <p>This tells the browser:</p>
+                        <ul>
+                            <li>On the smallest screens, be 12 columns wide (full width).</li>
+                            <li>On medium screens (<code>md</code>) and up, be 6 columns wide (half width).</li>
+                            <li>On large screens (<code>lg</code>) and up, be 4 columns wide (one-third width).</li>
+                        </ul>
+                        <p>You can also use classes like <strong><code>.offset-md-2</code></strong> to add spacing or <strong><code>.g-3</code></strong> (gutters) on the <code>.row</code> to control the space between your columns.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="portfolio.js?v=2"></script> 
+</body>
+</html>

@@ -1,0 +1,73 @@
+/*
+ * Custom Stylesheet for the Portfolio Project (Exp 4)
+ */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* --- Hero Section (index.html) --- */
+.hero-section {
+    background-color: #004d40; /* Dark Teal */
+    background-image: linear-gradient(145deg, #004d40, #00796b);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #b2dfdb; /* Light teal border */
+    object-fit: cover;
+}
+
+/* --- Project Cards (projects.html) --- */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
+}
+
+/* --- Blog Page (blog.html) --- */
+.blog-post {
+    background-color: #f8f9fa;
+}
+
+.blog-content {
+    border-left: 4px solid #00796b; /* Teal accent */
+    padding-left: 15px;
+    background-color: #fff;
+}
+
+/* --- Form Validation (contact.html) --- */
+/* These classes are used by our JS */
+.form-message-success {
+    padding: 1rem;
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+    border-radius: .25rem;
+}
+
+.form-message-error {
+    padding: 1rem;
+    background-color: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+    border-radius: .25rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #343a40; /* Bootstrap's bg-dark color */
+}
+
+/* The extra '}' at the end has been removed */
